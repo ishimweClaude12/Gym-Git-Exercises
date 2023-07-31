@@ -58,3 +58,291 @@ Deleted branch test (was 0fd719a).
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
 $
+
+# Exercise 2
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)ises (main)
+$ git add home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash list
+stash@{0}: WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add about.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash list
+stash@{0}: WIP on main: 557abba Add Home.html
+stash@{1}: WIP on main: 557abba Add Home.html
+stash@{2}: WIP on main: 557abba Add Home.html
+stash@{3}: WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash pop stash@{2}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: home.html
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{2} (707d5e5575b84ce3cd7f27613342529c249e7c45)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash pop stash@{1}
+error: The following untracked working tree files would be overwritten by merge:
+about.html
+Please move or remove them before you merge.
+Aborting
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: home.html
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+The stash entry is kept in case you need it again.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git commit -m "Commit Current Changes"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: home.html
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git commit -m "Commit Current Changes"
+[main 79b96ee] Commit Current Changes
+2 files changed, 14 insertions(+)
+create mode 100644 about.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 579 bytes | 579.00 KiB/s,
+done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1
+local object.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+557abba..79b96ee main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash list
+stash@{0}: WIP on main: 557abba Add Home.html
+stash@{1}: WIP on main: 557abba Add Home.html
+stash@{2}: WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash pop stash@{2}
+Auto-merging about.html
+CONFLICT (add/add): Merge conflict in about.html  
+Auto-merging home.html
+CONFLICT (content): Merge conflict in home.html  
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ modified: README.md
+new file: team.html
+
+Unmerged paths:
+(use "git restore --staged <file>..." to unstage)  
+ (use "git add <file>..." to mark resolution)
+both added: about.html
+both modified: home.html
+
+The stash entry is kept in case you need it again.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ modified: README.md
+new file: team.html
+
+Unmerged paths:
+(use "git restore --staged <file>..." to unstage)  
+ (use "git add <file>..." to mark resolution)
+both added: about.html
+both modified: home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ modified: README.md
+modified: about.html
+modified: home.html
+new file: team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git restore team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ modified: README.md
+modified: about.html
+modified: home.html
+new file: team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git restore --stage team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ modified: README.md
+modified: about.html
+modified: home.html
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash list
+stash@{0}: WIP on main: 557abba Add Home.html
+stash@{1}: WIP on main: 557abba Add Home.html
+stash@{2}: WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 79b96ee Commit Current Changes
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
+$ git stash list
+stash@{0}: WIP on main: 79b96ee Commit Current Changes
+stash@{1}: WIP on main: 557abba Add Home.html
+stash@{2}: WIP on main: 557abba Add Home.html
+stash@{3}: WIP on main: 557abba Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
+$ git stash pop stash@{3}
+error: The following untracked working tree files would be overwritten by merge:
+team.html
+Please move or remove them before you merge.
+Aborting
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+The stash entry is kept in case you need it again.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 79b96ee Commit Current Changes
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
+$ git stash pop stash@{3}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ new file: about.html
+
+Dropped stash@{3} (104ccea43bec58dac107edfa4467818ecd00a9c3)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$
