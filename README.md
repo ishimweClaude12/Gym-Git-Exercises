@@ -419,3 +419,127 @@ User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
 $
 
 ## Exercise 2
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git pull
+Already up to date.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout -b ft/service-redesign
+fatal: a branch named 'ft/service-redesign' already exists
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git commit -m "Add services page"
+[ft/service-redesign 7e61bc1] Add services page
+1 file changed, 10 insertions(+)
+create mode 100644 services.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without
+a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 459 bytes | 459.00 KiB/s,
+done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1
+local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/service-redesign -> ft/service-redesign
+  branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git commit -m "Change Services page"
+[main f83c479] Change Services page
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 353 bytes | 353.00 KiB/s,
+done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (2/2), completed with 2
+local objects.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+faa7498..f83c479 main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git diff
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html  
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+All conflicts fixed but you are still merging.
+(use "git commit" to conclude merge)
+
+Changes to be committed:
+modified: README.md
+modified: services.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign|MERGING)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign|MERGING)
+$ git commit -m "Merge conflicts"
+[ft/service-redesign 7051d67] Merge conflicts
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git push
+Everything up-to-date
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$
