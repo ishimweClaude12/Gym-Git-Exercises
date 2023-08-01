@@ -346,3 +346,76 @@ Your branch is up to date with 'origin/main'.
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
 $
+
+# Bundle 2
+
+## Exercise 1
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git branch
+dev
+
+- main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: README.md
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$ git add services.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$ git commit -m "Add Services page"
+[ft/bundle-2 0a23864] Add Services page
+1 file changed, 10 insertions(+)
+create mode 100644 services.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without
+a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 455 bytes | 455.00 KiB/s,
+done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1
+local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/bundle-2 -> ft/bundle-2  
+  branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/bundle-2)
+$
+
+## Exercise 2
