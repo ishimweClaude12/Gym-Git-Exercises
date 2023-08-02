@@ -1,6 +1,5 @@
-# Git Exercises Solutions
-
-# Bundle 1
+#Git Exercises Solutions
+#Bundle 1
 
 ## Exercise 1
 
@@ -60,7 +59,7 @@ Deleted branch test (was 0fd719a).
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (dev)
 $
 
-## Exercise 2
+# Exercise 2
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)ises (main)
 $ git add home.html
@@ -544,7 +543,3 @@ Everything up-to-date
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
 $
-
-# Bundle 3
-
-## Exercise 1
