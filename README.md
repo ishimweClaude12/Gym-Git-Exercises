@@ -543,3 +543,645 @@ Everything up-to-date
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
 $
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign|MERGING)
+$ git commit -m "Merge conflicts"
+[ft/service-redesign 7051d67] Merge conflicts
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
+$ git push
+Everything up-to-date
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add README.md
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git commit -m "Add Terminal History - Bundle 2 - Exercise 2"
+[main 70b2703] Add Terminal History - Bundle 2 - Exercise 2
+1 file changed, 124 insertions(+)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.08 KiB | 1.08 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1
+local object.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+f83c479..70b2703 main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$
+
+- History restored
+
+# Bundle 3
+
+## Exercise 1
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git commit -m "Add Team page"
+[ft/team-page 0624abb] Add Team page
+2 files changed, 18 insertions(+), 3 deletions(-) create mode 100644 team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help
+config'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git push --set-upstream origin ft/team-page  
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 635 bytes | 635.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/team-page
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/team-page -> ft/team-page
+  branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits,
+and can be fast-forwarded.
+(use "git pull" to update your local branch)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git log
+commit 0624abbab8b1962cdc5c2715ba6a76474e01074e (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 10:56:28 2023 +0200
+
+    Add Team page
+
+commit 70b27039c706c9a6b8af0c4aa7d010ba0df59d11 (main, ft/contact-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 20:06:59 2023 +0200
+
+    Add Terminal History - Bundle 2 - Exercise 2
+
+commit f83c4792c3ab6b812522bcc6947721bf12c6c017  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 19:54:15 2023 +0200
+
+    Change Services page
+
+commit faa74986b2e0bea163fc29ff65fa66193fd5f2f8 (ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 16:46:45 2023 +0200
+
+    Add README Changes on Bundle 2
+
+commit 382ca111a1197fcc6c71db1e4090570a52e14af5  
+Merge: 8da8e87 0a23864
+Author: ishoborabyose <52440263+ishoborabyose@users.noreply.github.com>
+Date: Tue Aug 1 16:18:07 2023 +0200
+
+    Merge pull request #2 from ishimweClaude12/ft/bundle-2
+
+    Bundle 2- Exercise 1  - Add Services page
+
+commit 0a238648c72176ac7a13f7f665a5cc3257d95984 (origin/ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 10:46:42 2023 +0200
+
+    Add Services page
+
+commit 8da8e8768df5763be9c414def195ce06f5724e99  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:58:19 2023 +0200
+
+    Add: Terminal History
+
+commit 79b96ee674217e28d7dfebff7724a86626da4371  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:34:41 2023 +0200
+
+    Commit Current Changes
+
+commit 557abba92ad303868d73ad8a25ffde8f295e2c4b  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:07:55 2023 +0200
+
+    Add Home.html
+
+commit 24b085a3660f8a63c9f9dc9a19b3b468450f234b  
+Merge: 0fd719a 35d1d1e
+Author: Claude <77576560+ishimweClaude12@users.noreply.github.com>
+Date: Mon Jul 31 08:04:41 2023 +0200
+
+    Merge pull request #1 from ishimweClaude12/dev
+    README Bundle 1 - Exercise 1
+
+commit 35d1d1e9c1eacec303cb2707d3cb8620c96fb0b3 (origin/dev, dev)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:03:10 2023 +0200
+
+    README Bundle 1 - Exercise 1
+
+commit 0fd719ada67e036e6ca2db9e822298497d2caea2  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 07:58:33 2023 +0200
+
+     Add README.md
+
+commit 1c04b6c43dbf5e9bb24141929e4d269132c4e0ba  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 07:57:42 2023 +0200
+
+    Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git log
+commit 70b27039c706c9a6b8af0c4aa7d010ba0df59d11 (HEAD -> ft/contact-page, main)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 20:06:59 2023 +0200
+
+    Add Terminal History - Bundle 2 - Exercise 2
+
+commit f83c4792c3ab6b812522bcc6947721bf12c6c017  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 19:54:15 2023 +0200
+
+    Change Services page
+
+commit faa74986b2e0bea163fc29ff65fa66193fd5f2f8 (ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 16:46:45 2023 +0200
+
+    Add README Changes on Bundle 2
+
+commit 382ca111a1197fcc6c71db1e4090570a52e14af5  
+Merge: 8da8e87 0a23864
+Author: ishoborabyose <52440263+ishoborabyose@users.noreply.github.com>
+Date: Tue Aug 1 16:18:07 2023 +0200
+
+    Merge pull request #2 from ishimweClaude12/ft/bundle-2
+
+    Bundle 2- Exercise 1  - Add Services page
+
+commit 0a238648c72176ac7a13f7f665a5cc3257d95984 (origin/ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 10:46:42 2023 +0200
+
+    Add Services page
+
+commit 8da8e8768df5763be9c414def195ce06f5724e99  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:58:19 2023 +0200
+
+    Add: Terminal History
+
+commit 79b96ee674217e28d7dfebff7724a86626da4371  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:34:41 2023 +0200
+
+    Commit Current Changes
+
+commit 557abba92ad303868d73ad8a25ffde8f295e2c4b  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:07:55 2023 +0200
+
+    Add Home.html
+
+commit 24b085a3660f8a63c9f9dc9a19b3b468450f234b  
+Merge: 0fd719a 35d1d1e
+Author: Claude <77576560+ishimweClaude12@users.noreply.github.com>
+Date: Mon Jul 31 08:04:41 2023 +0200
+
+    Merge pull request #1 from ishimweClaude12/dev
+    README Bundle 1 - Exercise 1
+
+commit 35d1d1e9c1eacec303cb2707d3cb8620c96fb0b3 (origin/dev, dev)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:03:10 2023 +0200
+
+    README Bundle 1 - Exercise 1
+
+commit 0fd719ada67e036e6ca2db9e822298497d2caea2  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 07:58:33 2023 +0200
+
+     Add README.md
+
+commit 1c04b6c43dbf5e9bb24141929e4d269132c4e0ba  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 07:57:42 2023 +0200
+
+    Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git log --oneline
+70b2703 (HEAD -> ft/contact-page, main) Add Terminal History - Bundle 2 - Exercise 2
+f83c479 Change Services page
+faa7498 (ft/bundle-2) Add README Changes on Bundle 2
+382ca11 Merge pull request #2 from ishimweClaude12/ft/bundle-2
+0a23864 (origin/ft/bundle-2) Add Services page  
+8da8e87 Add: Terminal History
+79b96ee Commit Current Changes
+557abba Add Home.html
+24b085a Merge pull request #1 from ishimweClaude12/dev
+35d1d1e (origin/dev, dev) README Bundle 1 - Exercise 1
+0fd719a Add README.md
+1c04b6c Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git branch
+dev
+ft/bundle-2
+
+- ft/contact-page
+  ft/service-redesign
+  ft/team-page
+  main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git log --oneline
+0624abb (HEAD -> ft/team-page, origin/ft/team-page) Add Team page
+70b2703 (main, ft/contact-page) Add Terminal History - Bundle 2 - Exercise 2
+f83c479 Change Services page
+faa7498 (ft/bundle-2) Add README Changes on Bundle 2
+382ca11 Merge pull request #2 from ishimweClaude12/ft/bundle-2
+0a23864 (origin/ft/bundle-2) Add Services page  
+8da8e87 Add: Terminal History
+79b96ee Commit Current Changes
+557abba Add Home.html
+24b085a Merge pull request #1 from ishimweClaude12/dev
+35d1d1e (origin/dev, dev) README Bundle 1 - Exerci
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git cherry-pick 0624abb
+[ft/contact-page 9c02c84] Add Team page
+Date: Wed Aug 2 10:56:28 2023 +0200
+2 files changed, 18 insertions(+), 3 deletions(-) create mode 100644 team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git commit -m "Cherry pick changes from team page"
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help
+config'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 642 bytes | 642.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/contact-page
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/contact-page -> ft/contact-page
+  branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git commit -m "Add faq page"
+[ft/faq-page c53540b] Add faq page
+1 file changed, 11 insertions(+)
+create mode 100644 faq.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help
+config'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page  
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 473 bytes | 473.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/faq-page
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/faq-page -> ft/faq-page  
+  branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git log --oneline
+0624abb (HEAD -> ft/team-page, origin/ft/team-page) Add Team page
+70b2703 (main) Add Terminal History - Bundle 2 - Exercise 2
+f83c479 Change Services page
+Revert "Add Team page"
+faa7498 (ft/bundle-2) Add README Changes on Bundle 2
+382ca11 Merge pull request #2 from ishimweClaude12/ft/bundle-2
+0a23864 (origin/ft/bundle-2) Add Services page  
+8da8e87 Add: Terminal History
+79b96ee Commit Current Changes
+557abba Add Home.html
+24b085a Merge pull request #1 from ishimweClaude12/dev
+35d1d1e (origin/dev, dev) README Bundle 1 - Exerci
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git revert 0624abb
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...
+Vim: Finished.
+
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git revert 0624abb "Revert all changes back to team page"
+fatal: bad revision 'Revert all changes back to team page'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/team-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+M README.md
+D team.html
+Your branch is up to date with 'origin/ft/faq-page'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git log
+commit c53540b2fa449bcfdb0797cafac68e6a19d236cd (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 11:21:00 2023 +0200
+
+    Add faq page
+
+commit 9c02c846f53242876a53821cd5e4d1e0eb6b16c8 (origin/ft/contact-page, ft/contact-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 10:56:28 2023 +0200
+
+    Add Team page
+
+commit 70b27039c706c9a6b8af0c4aa7d010ba0df59d11 (main)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git log
+commit c53540b2fa449bcfdb0797cafac68e6a19d236cd (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 11:21:00 2023 +0200
+
+    Add faq page
+
+commit 9c02c846f53242876a53821cd5e4d1e0eb6b16c8 (origin/ft/contact-page, ft/contact-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 10:56:28 2023 +0200
+
+    Add Team page
+
+commit 70b27039c706c9a6b8af0c4aa7d010ba0df59d11 (main)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 20:06:59 2023 +0200
+
+    Add Terminal History - Bundle 2 - Exercise 2
+
+commit f83c4792c3ab6b812522bcc6947721bf12c6c017  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 19:54:15 2023 +0200
+
+    Change Services page
+
+commit faa74986b2e0bea163fc29ff65fa66193fd5f2f8 (ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 16:46:45 2023 +0200
+
+    Add README Changes on Bundle 2
+
+commit 382ca111a1197fcc6c71db1e4090570a52e14af5  
+Merge: 8da8e87 0a23864
+Author: ishoborabyose <52440263+ishoborabyose@users.noreply.github.com>
+Date: Tue Aug 1 16:18:07 2023 +0200
+
+    Merge pull request #2 from ishimweClaude12/ft/bundle-2
+
+    Bundle 2- Exercise 1  - Add Services page
+
+commit 0a238648c72176ac7a13f7f665a5cc3257d95984 (origin/ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git revert 9c02c846f53242876a53821cd5e4d1e0eb6b16c81~
+fatal: bad revision '9c02c846f53242876a53821cd5e4d1e0eb6b16c81~'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git log
+commit c53540b2fa449bcfdb0797cafac68e6a19d236cd (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 11:21:00 2023 +0200
+
+    Add faq page
+
+commit 9c02c846f53242876a53821cd5e4d1e0eb6b16c8 (origin/ft/contact-page, ft/contact-page)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Wed Aug 2 10:56:28 2023 +0200
+
+    Add Team page
+
+commit 70b27039c706c9a6b8af0c4aa7d010ba0df59d11 (main)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 20:06:59 2023 +0200
+
+    Add Terminal History - Bundle 2 - Exercise 2
+
+commit f83c4792c3ab6b812522bcc6947721bf12c6c017  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 19:54:15 2023 +0200
+
+    Change Services page
+
+commit faa74986b2e0bea163fc29ff65fa66193fd5f2f8 (ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 16:46:45 2023 +0200
+
+    Add README Changes on Bundle 2
+
+commit 382ca111a1197fcc6c71db1e4090570a52e14af5  
+Merge: 8da8e87 0a23864
+Author: ishoborabyose <52440263+ishoborabyose@users.noreply.github.com>
+Date: Tue Aug 1 16:18:07 2023 +0200
+
+    Merge pull request #2 from ishimweClaude12/ft/bundle-2
+
+    Bundle 2- Exercise 1  - Add Services page
+
+commit 0a238648c72176ac7a13f7f665a5cc3257d95984 (origin/ft/bundle-2)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Tue Aug 1 10:46:42 2023 +0200
+
+    Add Services page
+
+commit 8da8e8768df5763be9c414def195ce06f5724e99  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:58:19 2023 +0200
+
+    Add: Terminal History
+
+commit 79b96ee674217e28d7dfebff7724a86626da4371  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:34:41 2023 +0200
+
+    Commit Current Changes
+
+commit 557abba92ad303868d73ad8a25ffde8f295e2c4b  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:07:55 2023 +0200
+
+    Add Home.html
+
+commit 24b085a3660f8a63c9f9dc9a19b3b468450f234b  
+Merge: 0fd719a 35d1d1e
+Author: Claude <77576560+ishimweClaude12@users.noreply.github.com>
+Date: Mon Jul 31 08:04:41 2023 +0200
+
+    Merge pull request #1 from ishimweClaude12/dev
+    README Bundle 1 - Exercise 1
+
+commit 35d1d1e9c1eacec303cb2707d3cb8620c96fb0b3 (origin/dev, dev)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 08:03:10 2023 +0200
+
+    README Bundle 1 - Exercise 1
+
+commit 0fd719ada67e036e6ca2db9e822298497d2caea2  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 07:58:33 2023 +0200
+
+     Add README.md
+
+commit 1c04b6c43dbf5e9bb24141929e4d269132c4e0ba  
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>  
+Date: Mon Jul 31 07:57:42 2023 +0200
+
+    Add Home.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)ises (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)  
+ modified: README.md
+deleted: team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git push
+Everything up-to-date
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git commit -m "Add everything after revert"
+[ft/faq-page 98ba992] Add everything after revert
+2 files changed, 3 insertions(+), 18 deletions(-)  
+ delete mode 100644 team.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 359.00 KiB/s,
+done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (2/2), completed with 2
+local objects.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+c53540b..98ba992 ft/faq-page -> ft/faq-page
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$
