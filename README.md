@@ -543,6 +543,7 @@ Everything up-to-date
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
 $
+<<<<<<< HEAD
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign|MERGING)
 $ git commit -m "Merge conflicts"
@@ -1185,3 +1186,5 @@ c53540b..98ba992 ft/faq-page -> ft/faq-page
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
 $
+=======
+>>>>>>> 98ba992 (Add everything after revert)
