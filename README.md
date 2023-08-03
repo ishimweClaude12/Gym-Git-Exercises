@@ -543,6 +543,7 @@ Everything up-to-date
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign)
 $
+<<<<<<< HEAD
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/service-redesign|MERGING)
 $ git commit -m "Merge conflicts"
@@ -589,10 +590,6 @@ User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
 $
 
 - History restored
-
-# Bundle 3
-
-## Exercise 1
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
 $ git checkout -b ft/team-page
