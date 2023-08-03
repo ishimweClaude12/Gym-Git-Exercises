@@ -1185,3 +1185,130 @@ c53540b..98ba992 ft/faq-page -> ft/faq-page
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
 $
+
+# Exercise 2
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git commit -m "Add changes to the main Branch"
+[main 373a98a] Add changes to the main Branch
+1 file changed, 2 insertions(+)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s,
+done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (2/2), completed with 2
+local objects.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+0c7712f..373a98a main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git rebase main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md  
+error: could not apply 9c02c84... Add Team page
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 9c02c84... Add Team page
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign|REBASE 1/3)
+$ git rebase --skip
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md  
+error: could not apply 98ba992... Add everything after
+revert
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 98ba992... Add everything after revert
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign|REBASE 3/3)
+$ git rebase --continue
+README.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign|REBASE 3/3)
+$ git rebase main
+Current branch ft/home-page-redesign is up to date.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git commit -m "Add Changes to the home page on ft/home-page-redesign branch"
+[ft/home-page-redesign 0adf821] Add Changes to the home page on ft/home-page-redesign branch
+2 files changed, 1 insertion(+), 6 deletions(-)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no
+upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without
+a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.37 KiB | 700.00 KiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (4/4), completed with 2
+local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/home-page-redesign -> ft/home-page-redesign
+  branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/home-page-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$
