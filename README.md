@@ -591,10 +591,6 @@ $
 
 - History restored
 
-# Bundle 3
-
-## Exercise 1
-
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
 $ git checkout -b ft/team-page
 Switched to a new branch 'ft/team-page'
@@ -1186,5 +1182,3 @@ c53540b..98ba992 ft/faq-page -> ft/faq-page
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/faq-page)
 $
-=======
->>>>>>> 98ba992 (Add everything after revert)
