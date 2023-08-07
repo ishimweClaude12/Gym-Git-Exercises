@@ -1367,3 +1367,95 @@ To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
 $
+
+## Exercise 2
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/footer)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/footer)
+$ git commit -m "Add Footer Features"
+[ft/footer 9fe27bb] Add Footer Features
+1 file changed, 10 insertions(+)  
+ create mode 100644 footer.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/footer)
+$ git commit -a -m "Add some more changes"
+[ft/footer 2033a4e] Add some more changes
+1 file changed, 5 insertions(+)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/footer)
+$ git push --set-upstream origin ft/footer1
+error: src refspec ft/footer1 does not match any
+error: failed to push some refs to 'https://github.com/ishimweClaude12/Gym-Git-Exercises.git'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 782 bytes | 260.00 KiB/s,
+done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1
+local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/footer
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/footer -> ft/footer
+  branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/footer)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating e44576c..2033a4e
+Fast-forward
+Squash commit -- not updating HEAD
+footer.html | 15 +++++++++++++++
+1 file changed, 15 insertions(+)
+create mode 100644 footer.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 03a9d91] footer changes squashing
+1 file changed, 15 insertions(+)
+create mode 100644 footer.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 509 bytes | 254.00 KiB/s,
+done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1
+local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/Gym-Git-Exercises/pull/new/ft/squashing
+remote:
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+
+- [new branch] ft/squashing -> ft/squashing  
+  branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/squashing)
+$
