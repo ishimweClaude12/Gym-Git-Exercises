@@ -1312,3 +1312,58 @@ Your branch is up to date with 'origin/main'.
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
 $
+
+# Bundle 4
+
+## Exercise 1
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git pull
+Already up to date.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git remote add git-copy https://github.com/ishimweClaude12/Gym-Git-Exercises-2.git
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git remote
+git-copy
+origin
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git commit -m "Add Changes to the Home page"
+[main 99cb169] Add Changes to the Home page
+1 file changed, 1 insertion(+)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git push git-copy
+Enumerating objects: 51, done.
+Counting objects: 100% (51/51), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (49/49), done.
+Writing objects: 100% (51/51), 11.76 KiB | 2.94 MiB/s,
+done.
+Total 51 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises-2.git
+
+- [new branch] main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 386 bytes | 386.00 KiB/s,
+done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (2/2), completed with 2
+local objects.
+To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
+69144c4..99cb169 main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (main)
+$
