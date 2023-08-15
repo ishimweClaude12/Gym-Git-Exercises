@@ -1459,3 +1459,161 @@ To https://github.com/ishimweClaude12/Gym-Git-Exercises.git
 
 User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/Git-Exercises (ft/squashing)
 $
+
+# Bundle 5
+
+## Exercise 1
+
+Unfortunately this exericise didn't require me to write so much in my termianl
+But here is the link to the page I hosted using github pages.
+https://ishimweclaude12.github.io/Gym-Git-Exercises/
+You can check it out
+
+## Exercise 2
+
+Here is the link to my forked copy of the git-cafe-exercise repository
+https://github.com/ishimweClaude12/git-cafe-exercise.git
+
+# Bundle 6
+
+## Exercise 1
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (main)
+$ git add index.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (main)
+$ git commit -m "Change Title to Welcome to our Restuarant"
+[main 5ef7b9e] Change Title to Welcome to our Restuarant
+1 file changed, 399 insertions(+), 239 deletions(-)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.58 KiB | 1.58 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ishimweClaude12/git-cafe-exercise.git
+d1d3f9c..5ef7b9e main -> main
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (main)
+$ git log
+commit 5ef7b9e65786bfd1352bc47b37d50f71f286b267 (HEAD -> main, oricommit 5ef7b9e65786bfd1352bc47b37d50f71f286b267 (HEAD -> main, origin/main, origin/HEAD)
+Author: Claude Ishimwe <dpqb12haikuo@gmail.com>
+Date: Thu Jul 27 11:42:43 2023 +0200
+
+    Change Title to Welcome to our Restuarant
+
+commit d1d3f9cb39e96d536a439a0bcb1206f073305b9b
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (main)
+$ git checkout -b ft/menu
+Switched to a new branch 'ft/menu'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (ft/menu)
+$ git add index.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (ft/menu)
+$ git commit -m "feat: Change Index.html Title"
+[ft/menu 34d5727] feat: Change Index.html Title
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (ft/menu)
+$ git add .
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (ft/menu)
+$ git commit -m "feat: Menu title"
+[ft/menu e6c626f] feat: Menu title
+1 file changed, 323 insertions(+)
+create mode 100644 menu.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (ft/menu)
+$ git push --set-upstream origin ft/menu
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.91 KiB | 325.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/menu' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/git-cafe-exercise/pull/new/ft/menu
+remote:
+To https://github.com/ishimweClaude12/git-cafe-exercise.git
+
+- [new branch] ft/menu -> ft/menu
+  branch 'ft/menu' set up to track 'origin/ft/menu'.
+
+## Exercise 2
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (ft/menu)
+$ git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (bug-fix)
+$ git add index-4.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (bug-fix)
+$ git commit -m "feat: Change index-4.html | title to Contacts"
+[bug-fix baba09a] feat: Change index-4.html | title to Contacts
+1 file changed, 232 insertions(+), 164 deletions(-)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (bug-fix)
+$ git push --set-upstream origin bug-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.44 KiB | 490.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/git-cafe-exercise/pull/new/bug-fix
+remote:
+To https://github.com/ishimweClaude12/git-cafe-exercise.git
+
+- [new branch] bug-fix -> bug-fix
+  branch 'bug-fix' set up to track 'origin/bug-fix'.
+
+## Exercise 3
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (bug-fix)
+$ git checkout -b fot-fix
+Switched to a new branch 'fot-fix'
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (fot-fix)
+$ git add index-4.html
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (fot-fix)
+$ git commit -m "feat: Hot-Fix, Change the telephone number"
+[fot-fix 7884fa7] feat: Hot-Fix, Change the telephone number
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (fot-fix)
+$ git push --set-upstream origin fot-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'fot-fix' on GitHub by visiting:
+remote: https://github.com/ishimweClaude12/git-cafe-exercise/pull/new/fot-fix
+remote:
+To https://github.com/ishimweClaude12/git-cafe-exercise.git
+
+- [new branch] fot-fix -> fot-fix
+  branch 'fot-fix' set up to track 'origin/fot-fix'.
+
+User@DESKTOP-3M65OUK MINGW64 ~/Desktop/TheGym/git-cafe-exercise (fot-fix)
+$
+
+## Exercise 4
+
+### Reviewing and Merging the Pull Requests from Peers.
