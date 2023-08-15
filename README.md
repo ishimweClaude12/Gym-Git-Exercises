@@ -1,5 +1,6 @@
-#Git Exercises Solutions
-#Bundle 1
+# Git Exercises Solutions
+
+# Bundle 1
 
 ## Exercise 1
 
